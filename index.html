@@ -50,9 +50,14 @@
     </div>
 	<div class="header2">
 		
+
 			<a href="#" class="desktop-hamburger hamburger-toggle">
-		     <i class="fa fa-bars" aria-hidden="true"></i>
+			<span onclick="openNav()">
+		     <i id="recentItem" class="fa fa-bars" aria-hidden="true"></i>
+		      </span>
 		    </a>
+
+		   
 		
 		<ul class="header2list">
 		      <li class="headli active "><a href="">All</a></li>
@@ -134,9 +139,19 @@
 
   </div>
 </div>
-<div class="sidebar">
-	
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+ 		  <div>
+            <p>Read. Watch. Shop. Hangout.</p>
+            <p>Sign up for POPxo World!</p>
+          </div>
+         
+</div>
 
+<!-- Use any element to open the sidenav -->
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the 
+-->
 </div>
 <section class="sometop">
 	<div class="row">
@@ -362,6 +377,21 @@ left: '-300px'
 }); 
 $("body").css('overflow','auto');});
 });
+
+</script>
+<script type="text/javascript">
+	/* Set the width of the side navigation to 250px */
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<script>
+
 
 </script>
 </body>
